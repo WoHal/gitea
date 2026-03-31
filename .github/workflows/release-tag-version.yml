@@ -90,8 +90,8 @@ jobs:
         id: meta
         with:
           images: |-
-            gitea/gitea
-            ghcr.io/go-gitea/gitea
+            wohal/gitea
+            ghcr.io/wohal/gitea
           # this will generate tags in the following format:
           # latest
           # 1
@@ -107,8 +107,8 @@ jobs:
         id: meta_rootless
         with:
           images: |-
-            gitea/gitea
-            ghcr.io/go-gitea/gitea
+            wohal/gitea
+            ghcr.io/wohal/gitea
           # each tag below will have the suffix of -rootless
           flavor: |
             suffix=-rootless,onlatest=true
