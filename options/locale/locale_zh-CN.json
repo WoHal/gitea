@@ -1087,6 +1087,7 @@
   "repo.need_auth": "授权",
   "repo.migrate_options": "迁移选项",
   "repo.migrate_service": "迁移服务",
+  "repo.migrate_options_shallow": "浅克隆",
   "repo.migrate_options_mirror_helper": "该仓库将是一个镜像",
   "repo.migrate_options_lfs": "迁移 LFS 文件",
   "repo.migrate_options_lfs_endpoint.label": "LFS 网址",

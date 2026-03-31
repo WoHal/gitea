@@ -1090,6 +1090,7 @@
   "repo.need_auth": "Authorization",
   "repo.migrate_options": "Migration Options",
   "repo.migrate_service": "Migration Service",
+  "repo.migrate_options_shallow": "Shallow Clone",
   "repo.migrate_options_mirror_helper": "This repository will be a mirror",
   "repo.migrate_options_lfs": "Migrate LFS files",
   "repo.migrate_options_lfs_endpoint.label": "LFS Endpoint",

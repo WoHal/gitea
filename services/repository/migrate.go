@@ -93,6 +93,7 @@ func MigrateRepositoryGitData(ctx context.Context, u *user_model.User,
 	if err := gitrepo.CloneExternalRepo(ctx, opts.CloneAddr, repo, git.CloneRepoOptions{
 		Mirror:        true,
 		Quiet:         true,
+		Depth:         opts.Depth,
 		Timeout:       migrateTimeout,
 		SkipTLSVerify: setting.Migrations.SkipTLSVerify,
 	}); err != nil {

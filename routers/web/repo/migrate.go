@@ -208,6 +208,7 @@ func MigratePost(ctx *context.Context) {
 		OriginalURL:    form.CloneAddr,
 		GitServiceType: form.Service,
 		CloneAddr:      remoteAddr,
+		Depth:          form.Depth,
 		RepoName:       form.RepoName,
 		Description:    form.Description,
 		Private:        form.Private || setting.Repository.ForcePrivate,

@@ -371,6 +371,8 @@ func (gt GitServiceType) Title() string {
 type MigrateRepoOptions struct {
 	// required: true
 	CloneAddr string `json:"clone_addr" binding:"Required"`
+	// shallow clone depth, 0 for full clone
+	Depth int `json:"depth"`
 	// deprecated (only for backwards compatibility, use repo_owner instead)
 	RepoOwnerID int64 `json:"uid"`
 	// the organization's name or individual user's name who will own the migrated repository
