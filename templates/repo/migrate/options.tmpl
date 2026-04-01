@@ -7,6 +7,13 @@
 	</div>
 </div>
 {{end}}
+<div class="inline field">
+	<label>{{ctx.Locale.Tr "repo.migrate_options_shallow"}}</label>
+	<div class="ui checkbox">
+		<input id="shallow" name="shallow" type="checkbox" {{if .shallow}} checked{{end}}>
+		<label>{{ctx.Locale.Tr "repo.migrate_options_shallow_helper"}}</label>
+	</div>
+</div>
 {{if .LFSActive}}
 <div class="inline field">
 	<label></label>
