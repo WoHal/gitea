@@ -12,6 +12,7 @@ type MigrateOptions struct {
 	// required: true
 	CloneAddr             string `json:"clone_addr" binding:"Required"`
 	CloneAddrEncrypted    string `json:"clone_addr_encrypted,omitempty"`
+	Shallow               bool   `json:"shallow"`
 	AuthUsername          string `json:"auth_username"`
 	AuthPassword          string `json:"-"`
 	AuthPasswordEncrypted string `json:"auth_password_encrypted,omitempty"`

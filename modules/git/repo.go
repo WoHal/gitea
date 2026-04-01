@@ -106,6 +106,7 @@ type CloneRepoOptions struct {
 	Branch        string
 	Shared        bool
 	NoCheckout    bool
+	Shallow       bool
 	Depth         int
 	Filter        string
 	SkipTLSVerify bool
@@ -141,6 +142,8 @@ func Clone(ctx context.Context, from, to string, opts CloneRepoOptions) error {
 	}
 	if opts.Depth > 0 {
 		cmd.AddArguments("--depth").AddDynamicArguments(strconv.Itoa(opts.Depth))
+	} else if opts.Shallow {
+		cmd.AddArguments("--depth").AddDynamicArguments("1")
 	}
 	if opts.Filter != "" {
 		cmd.AddArguments("--filter").AddDynamicArguments(opts.Filter)

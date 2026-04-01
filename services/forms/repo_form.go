@@ -56,6 +56,7 @@ func (f *CreateRepoForm) Validate(req *http.Request, errs binding.Errors) bindin
 type MigrateRepoForm struct {
 	// required: true
 	CloneAddr    string                 `json:"clone_addr" binding:"Required"`
+	Shallow      bool                   `json:"shallow"`
 	Service      structs.GitServiceType `json:"service"`
 	AuthUsername string                 `json:"auth_username"`
 	AuthPassword string                 `json:"auth_password"`

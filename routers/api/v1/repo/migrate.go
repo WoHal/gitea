@@ -142,6 +142,7 @@ func Migrate(ctx *context.APIContext) {
 	opts := migrations.MigrateOptions{
 		OriginalURL:    form.CloneAddr,
 		CloneAddr:      remoteAddr,
+		Shallow:        form.Shallow,
 		RepoName:       form.RepoName,
 		Description:    form.Description,
 		Private:        form.Private || setting.Repository.ForcePrivate,

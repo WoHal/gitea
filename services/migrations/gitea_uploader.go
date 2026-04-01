@@ -125,6 +125,7 @@ func (g *GiteaLocalUploader) CreateRepo(ctx context.Context, repo *base.Reposito
 		LFS:            opts.LFS,
 		LFSEndpoint:    opts.LFSEndpoint,
 		CloneAddr:      repo.CloneURL, // SECURITY: we will assume that this has already been checked
+		Shallow:        opts.Shallow,
 		Private:        repo.IsPrivate,
 		Wiki:           opts.Wiki,
 		Releases:       opts.Releases, // if didn't get releases, then sync them from tags
