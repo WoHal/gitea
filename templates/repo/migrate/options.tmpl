@@ -1,6 +1,9 @@
 <div class="inline field">
 	<label>{{ctx.Locale.Tr "repo.migrate_options_shallow"}}</label>
-	<input id="shallow" name="shallow" type="checkbox" {{if .shallow}} checked{{end}}>
+	<div class="ui checkbox">
+		<input id="shallow" name="shallow" type="checkbox" {{if .shallow}} checked{{end}}>
+		<label>{{ctx.Locale.Tr "repo.migrate_options_shallow_helper"}}</label>
+	</div>
 </div>
 {{if not .DisableNewPullMirrors}}
 <div class="inline field">
